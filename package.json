@@ -1,6 +1,6 @@
 {
-  "name": "layaair-cmd",
-  "version": "2.2.6",
+  "name": "@junc/layaair-cmd",
+  "version": "1.0.0",
   "description": "layaair toolkit",
   "main": "layaair-cmd.js",
   "directories": {
@@ -19,9 +19,6 @@
     "uglify-js": "^3.4.6",
     "xmldom": "^0.1.27"
   },
-  "devDependencies": {
-    "layaair-cmd": "https://gitee.com/junc74/layaair-cmd.git"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -30,6 +27,6 @@
     "layacmd",
     "layaair-cmd"
   ],
-  "author": "yung",
+  "author": "junc",
   "license": "ISC"
 }
