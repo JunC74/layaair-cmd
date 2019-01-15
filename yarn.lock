@@ -136,19 +136,6 @@ jsonfile@^4.0.0:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-"layaair-cmd@https://gitee.com/junc74/layaair-cmd.git":
-  version "2.2.6"
-  resolved "https://gitee.com/junc74/layaair-cmd.git#637ea32ca9980de687c4851891f3ba0d5910db89"
-  dependencies:
-    anywhere "^1.4.0"
-    colors "^1.1.2"
-    commander "^2.11.0"
-    fs-extra "^4.0.1"
-    iconv-lite "^0.4.23"
-    jsonc-parser "^1.0.0"
-    uglify-js "^3.4.6"
-    xmldom "^0.1.27"
-
 mime-db@~1.37.0:
   version "1.37.0"
   resolved "http://registry.npm.taobao.org/mime-db/download/mime-db-1.37.0.tgz#0b6a0ce6fdbe9576e25f1f2d2fde8830dc0ad0d8"
