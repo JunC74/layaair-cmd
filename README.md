@@ -7,6 +7,7 @@
 * 对原本的LayaAir-cmd导出UI代码及资源方面进行了修复，使得可以正常导出LayaAir:1.7.18版本的UI资源.
 * ui导出添加了新的参数：‘customDict’-自定义UI XML文件所在路径的设置
 * 添加IDE 1.7.18版本的发布功能，参照：${IDE_PATH}/resources/app/out/layarepublic/publishpro2的实现来修改的
+* 添加IDE 1.7.22版本的发布功能实现微信小游戏和qq空间游戏的发布功能,参照：${IDE_PATH}/resources/app/out/layarepublic/LayaAirProjectPack的实现
 
 [TOC]
 
