@@ -30,6 +30,8 @@ program
   .option('--jsontypes <suffix>', tr("JSON suffix, default:json,atlas,ls,lh,lmat,lav,prefab"))
   .option('--compressJs', tr("Compression obfuscates JS (time consuming)"))
   .option('--enableVersion', tr("Whether to enable version management, when enabled, will rename the changed file"))
+  .option('--onlyIndexJS', tr("是否只复制index.html中引用的js文件"))
+  .option('--deleteOldVersionFile', tr("是否删除老版本的文件"))
   .option('--excludeFiles <files>', tr("Exclude files"))
   .option('--publishType <platform>', tr("Publishing platform: webnative(default), wxnimigame, qqwanyiwan"))
   .option('--projectType', tr("Project type: as, ts(default), js"))
@@ -41,6 +43,17 @@ program
 
 function getBoolean(value) {
   return value ? "true" : "false";
+}
+
+function getPublishType(value) {
+  switch (value) {
+    case "webnative":
+      return 0;
+    case  "wxnimigame":
+      return 1;
+    case "qqwanyiwan":
+      return 2;
+  }
 }
 
 function getParamObj() {
@@ -57,8 +70,10 @@ function getParamObj() {
   ret.jsontypes = program.jsontypes || "json,atlas,ls,lh,lmat,lav,prefab";
   ret.compressJs = getBoolean(program.compressJs);
   ret.enableVersion = getBoolean(program.enableVersion);
+  ret.onlyIndexJS = getBoolean(program.onlyIndexJS); // 是否只复制index.html中引用的js文件
+  ret.deleteOldVersionFile = getBoolean(program.deleteOldVersionFile); // 是否删除老版本的文件
   ret.excludeFiles = program.excludeFiles || "";
-  ret.publishType = program.publishType || "webnative";
+  ret.publishType = getPublishType(program.publishType || "webnative");
   ret.projectType = program.projectType || "ts";
   ret.copyOutFiles = program.copyOutFiles || "";
   ret.copyOutPath = program.copyOutPath || "";
